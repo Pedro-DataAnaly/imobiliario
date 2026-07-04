@@ -18,7 +18,10 @@
       "PowerShell(Start-Sleep -Seconds 3; \\(Get-NetTCPConnection -LocalPort 5173 -ErrorAction SilentlyContinue\\).State | Select-Object -First 1)",
       "PowerShell(winget install --id Git.Git -e --source winget 2>&1)",
       "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); cd \"c:\\\\Users\\\\pedro\\\\OneDrive\\\\Documentos\\\\imobiliario\"; git --version 2>&1)",
-      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); cd \"c:\\\\Users\\\\pedro\\\\OneDrive\\\\Documentos\\\\imobiliario\"; git init 2>&1; git add . 2>&1; git status --short 2>&1 | Select-Object -First 20)"
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); cd \"c:\\\\Users\\\\pedro\\\\OneDrive\\\\Documentos\\\\imobiliario\"; git init 2>&1; git add . 2>&1; git status --short 2>&1 | Select-Object -First 20)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); cd \"c:\\\\Users\\\\pedro\\\\OneDrive\\\\Documentos\\\\imobiliario\"; git config user.email \"pedrorsantos021@gmail.com\"; git config user.name \"Pedro Rodrigues\"; git commit -m \"feat: site Fabio Sena Imoveis - deploy inicial\" 2>&1 | Select-Object -Last 6)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); cd \"c:\\\\Users\\\\pedro\\\\OneDrive\\\\Documentos\\\\imobiliario\"; git remote add origin https://github.com/Pedro-DataAnaly/imobiliario.git 2>&1; git branch -M main 2>&1; Write-Host \"Pronto para push\")",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); cd \"c:\\\\Users\\\\pedro\\\\OneDrive\\\\Documentos\\\\imobiliario\"; git push -u origin main 2>&1)"
     ]
   }
 }
