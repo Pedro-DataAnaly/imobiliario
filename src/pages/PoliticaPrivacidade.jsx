@@ -190,7 +190,7 @@ export default function PoliticaPrivacidade() {
 
           <SECAO titulo="9. Segurança">
             <p>
-              Adotamos medidas técnicas para proteger os dados transmitidos pelo site, incluindo comunicação via HTTPS e ausência de armazenamento de dados pessoais em nossos servidores. O site é hospedado na Vercel, que mantém certificação SOC 2 Type 2.
+              Adotamos medidas técnicas para proteger os dados transmitidos pelo site, incluindo comunicação via HTTPS e ausência de armazenamento de dados pessoais em nossos servidores. O site é hospedado no Cloudflare Pages, que mantém certificação ISO 27001 e SOC 2.
             </p>
           </SECAO>
 
