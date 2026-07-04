@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(winget install OpenJS.NodeJS.LTS --accept-source-agreements --accept-package-agreements 2>&1)",
+      "PowerShell(Start-Process \"http://localhost:5173\")",
+      "PowerShell(New-Item -ItemType Directory -Force -Path \"c:\\\\Users\\\\pedro\\\\OneDrive\\\\Documentos\\\\imobiliario\\\\src\\\\contexts\")",
+      "PowerShell(New-Item -ItemType Directory -Force -Path \"c:\\\\Users\\\\pedro\\\\OneDrive\\\\Documentos\\\\imobiliario\\\\src\\\\lib\")",
+      "PowerShell(Start-Process \"http://localhost:3333\")",
+      "PowerShell(cd \"c:\\\\Users\\\\pedro\\\\OneDrive\\\\Documentos\\\\imobiliario\"; Start-Process powershell -ArgumentList \"-NoProfile -Command npm run dev\" -WindowStyle Normal)",
+      "PowerShell(Get-NetTCPConnection -LocalPort 5173 -ErrorAction SilentlyContinue)",
+      "PowerShell(cd \"c:\\\\Users\\\\pedro\\\\OneDrive\\\\Documentos\\\\imobiliario\"; Start-Process powershell -ArgumentList \"-NoProfile -NoExit -Command npm run dev\" -WindowStyle Normal; Start-Sleep -Seconds 4; \\(Get-NetTCPConnection -LocalPort 5173 -ErrorAction SilentlyContinue\\).State)",
+      "PowerShell(Get-Process -Name \"node\" -ErrorAction SilentlyContinue | Stop-Process -Force; Start-Sleep -Seconds 2; cd \"c:\\\\Users\\\\pedro\\\\OneDrive\\\\Documentos\\\\imobiliario\"; Start-Process powershell -ArgumentList \"-NoProfile -NoExit -Command npm run dev\" -WindowStyle Normal; Start-Sleep -Seconds 4; \\(Get-NetTCPConnection -LocalPort 5173 -ErrorAction SilentlyContinue\\).State)",
+      "Skill(code-review)",
+      "Skill(code-review:*)",
+      "PowerShell($bytes = [System.Text.Encoding]::UTF8.GetBytes\\(\"fabio2024\"\\); $sha256 = [System.Security.Cryptography.SHA256]::Create\\(\\); $hash = $sha256.ComputeHash\\($bytes\\); \\($hash | ForEach-Object { $_.ToString\\(\"x2\"\\) }\\) -join \"\")",
+      "PowerShell(cd \"c:\\\\Users\\\\pedro\\\\OneDrive\\\\Documentos\\\\imobiliario\"; npm audit --json 2>$null | ConvertFrom-Json | Select-Object -ExpandProperty vulnerabilities | Get-Member -MemberType NoteProperty | ForEach-Object { $name = $_.Name; $vuln = \\(npm audit --json 2>$null | ConvertFrom-Json\\).vulnerabilities.$name; \"$name : severity=$\\($vuln.severity\\) via=$\\($vuln.via | ConvertTo-Json -Compress\\)\" } 2>$null | Select-Object -First 10)",
+      "PowerShell(Get-Process -Name \"node\" -ErrorAction SilentlyContinue | Stop-Process -Force; Start-Sleep -Seconds 2; cd \"c:\\\\Users\\\\pedro\\\\OneDrive\\\\Documentos\\\\imobiliario\"; Start-Process powershell -ArgumentList \"-NoProfile -NoExit -Command npm run dev\" -WindowStyle Normal; Start-Sleep -Seconds 5; \\(Get-NetTCPConnection -LocalPort 5173 -ErrorAction SilentlyContinue | Where-Object State -eq 'Listen'\\).Count)",
+      "PowerShell(Start-Sleep -Seconds 3; \\(Get-NetTCPConnection -LocalPort 5173 -ErrorAction SilentlyContinue\\).State | Select-Object -First 1)",
+      "PowerShell(winget install --id Git.Git -e --source winget 2>&1)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); cd \"c:\\\\Users\\\\pedro\\\\OneDrive\\\\Documentos\\\\imobiliario\"; git --version 2>&1)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); cd \"c:\\\\Users\\\\pedro\\\\OneDrive\\\\Documentos\\\\imobiliario\"; git init 2>&1; git add . 2>&1; git status --short 2>&1 | Select-Object -First 20)"
+    ]
+  }
+}
