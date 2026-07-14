@@ -8,7 +8,7 @@ import LogoTree from '../components/LogoTree'
 import { WhatsAppIcon } from '../components/WhatsAppButton'
 import { useImoveis } from '../contexts/ImoveisContext'
 
-const WA_NUMBER = '5511920105933'
+const WA_NUMBER = '5511999999999'
 
 const FEATURES = [
   {
@@ -89,7 +89,7 @@ export default function Home() {
               Especialista em imóveis — São Paulo, Atibaia, Bragança Paulista e região
             </div>
 
-            <h1 className="font-cinzel text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight mb-4">
+            <h1 className="font-cinzel text-4xl sm:text-5  xl md:text-6xl font-bold text-white leading-tight mb-4">
               VIVER BEM.
               <br />
               <span className="text-dourado">INVESTIR MELHOR.</span>

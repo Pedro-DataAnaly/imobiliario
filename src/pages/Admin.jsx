@@ -15,7 +15,7 @@ async function checkPassword(input) {
   return hash === ADMIN_HASH
 }
 const GA_ID = import.meta.env.VITE_GA_MEASUREMENT_ID
-const WA_NUMBER = '5511920105933'
+const WA_NUMBER = '5511999999999'
 
 // ─── Login ───────────────────────────────────────────────────────────────────
 function LoginPage({ onLogin }) {

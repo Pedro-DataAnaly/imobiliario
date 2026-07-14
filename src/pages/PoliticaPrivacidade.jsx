@@ -61,7 +61,7 @@ export default function PoliticaPrivacidade() {
             <ul className="list-none space-y-1 mt-2">
               <li><strong className="text-grafite">Corretor:</strong> Fabio Renato Sena</li>
               <li><strong className="text-grafite">CRECI:</strong> 74.385-F</li>
-              <li><strong className="text-grafite">Telefone / WhatsApp:</strong> (11) 92010-5933</li>
+              <li><strong className="text-grafite">Telefone / WhatsApp:</strong> (11) 99999-9999</li>
               <li><strong className="text-grafite">Região de atuação:</strong> Atibaia, Bragança Paulista, São Paulo e região</li>
             </ul>
           </SECAO>
@@ -159,12 +159,12 @@ export default function PoliticaPrivacidade() {
             <p className="mt-3">
               Para exercer qualquer um desses direitos, entre em contato pelo WhatsApp{' '}
               <a
-                href="https://wa.me/5511920105933?text=Olá Fabio! Gostaria de exercer meus direitos LGPD."
+                href="https://wa.me/5511999999999?text=Olá Fabio! Gostaria de exercer meus direitos LGPD."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-verde-floresta underline hover:text-verde-escuro"
               >
-                (11) 92010-5933
+                (11) 99999-9999
               </a>
               .
             </p>
@@ -200,8 +200,8 @@ export default function PoliticaPrivacidade() {
             </p>
             <ul className="list-none space-y-1 mt-2">
               <li><strong className="text-grafite">WhatsApp:</strong>{' '}
-                <a href="https://wa.me/5511920105933" target="_blank" rel="noopener noreferrer" className="text-verde-floresta underline hover:text-verde-escuro">
-                  (11) 92010-5933
+                <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" className="text-verde-floresta underline hover:text-verde-escuro">
+                  (11) 99999-9999
                 </a>
               </li>
             </ul>

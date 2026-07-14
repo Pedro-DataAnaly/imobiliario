@@ -9,7 +9,7 @@ import { WhatsAppIcon } from '../components/WhatsAppButton'
 import { formatPrice, formatArea } from '../utils/formatters'
 import { useImoveis } from '../contexts/ImoveisContext'
 
-const WA_NUMBER = '5511920105933'
+const WA_NUMBER = '5511999999999'
 
 const TYPE_COLORS = {
   Casa: 'bg-emerald-100 text-emerald-700',

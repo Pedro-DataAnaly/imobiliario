@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import { WhatsAppIcon } from './WhatsAppButton'
 
-const WA_NUMBER = '5511920105933'
+const WA_NUMBER = '5511999999999'
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -111,7 +111,7 @@ export default function Navbar() {
             style={{ backgroundColor: '#25D366' }}
           >
             <WhatsAppIcon size={16} />
-            <span>(11) 92010-5933</span>
+            <span>(11) 99999-9999</span>
           </a>
         </div>
       )}

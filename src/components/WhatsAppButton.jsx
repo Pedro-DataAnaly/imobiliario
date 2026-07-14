@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const WA_NUMBER = '5511920105933'
+const WA_NUMBER = '5511999999999'
 
 function WhatsAppIcon({ size = 28 }) {
   return (

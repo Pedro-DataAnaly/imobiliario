@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { WhatsAppIcon } from './WhatsAppButton'
 
-const WA_NUMBER = '5511920105933'
+const WA_NUMBER = '5511999999999'
 
 function InstagramIcon() {
   return (
@@ -144,7 +144,7 @@ export default function Footer() {
                 <WhatsAppIcon size={20} />
                 <div>
                   <div className="text-xs opacity-80">WhatsApp</div>
-                  <div>(11) 92010-5933</div>
+                  <div>(11) 99999-9999</div>
                 </div>
               </a>
             </div>
