@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react'
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
-import MarkerClusterGroup from 'react-leaflet-cluster'
+import _MarkerClusterGroup from 'react-leaflet-cluster'
+const MarkerClusterGroup = _MarkerClusterGroup.default ?? _MarkerClusterGroup
 import L from 'leaflet'
 import { Link } from 'react-router-dom'
 import { formatPrice, formatArea } from '../utils/formatters'
