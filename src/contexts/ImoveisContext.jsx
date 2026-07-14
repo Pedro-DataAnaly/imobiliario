@@ -6,30 +6,50 @@ const ImoveisContext = createContext(null)
 
 export function ImoveisProvider({ children }) {
   const [imoveis, setImoveis] = useState(imoveisLocal)
-  const [loading, setLoading] = useState(isSanityConfigured)
+  const [loading, setLoading] = useState(true)
   const [source, setSource] = useState('local')
 
   useEffect(() => {
-    if (!isSanityConfigured) return
-
-    setLoading(true)
-    sanityClient
-      .fetch(IMOVEIS_QUERY)
-      .then((data) => {
-        if (data && data.length > 0) {
-          // Filtra fotos nulas (imóvel sem imagem cadastrada no Sanity)
-          const normalized = data.map((i) => ({
-            ...i,
-            fotos: (i.fotos || []).filter(Boolean),
-          }))
-          setImoveis(normalized)
-          setSource('sanity')
+    async function carregar() {
+      // 1. Tenta a API do Worker (Cloudflare D1)
+      try {
+        const res = await fetch('/api/imoveis')
+        if (res.ok) {
+          const data = await res.json()
+          if (Array.isArray(data) && data.length > 0) {
+            setImoveis(data)
+            setSource('api')
+            return
+          }
         }
-      })
-      .catch((err) => {
-        console.warn('[Sanity] Falha ao carregar dados, usando JSON local:', err.message)
-      })
-      .finally(() => setLoading(false))
+      } catch {
+        // Worker não disponível (dev local sem wrangler)
+      }
+
+      // 2. Tenta Sanity
+      if (isSanityConfigured) {
+        try {
+          const data = await sanityClient.fetch(IMOVEIS_QUERY)
+          if (data && data.length > 0) {
+            const normalized = data.map((i) => ({
+              ...i,
+              fotos: (i.fotos || []).filter(Boolean),
+            }))
+            setImoveis(normalized)
+            setSource('sanity')
+            return
+          }
+        } catch (err) {
+          console.warn('[Sanity] Falha ao carregar dados:', err.message)
+        }
+      }
+
+      // 3. Fallback: JSON local
+      setImoveis(imoveisLocal)
+      setSource('local')
+    }
+
+    carregar().finally(() => setLoading(false))
   }, [])
 
   return (
